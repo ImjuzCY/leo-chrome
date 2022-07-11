@@ -47,7 +47,7 @@ function search(text) {
 
 function navigateToUrl(url) {
 	// Navigate to URL on current tab
-	chrome.tabs.getSelected(null, function(tab) {
+	chrome.tabs.query({ active: true, currentWindow: true }, function(tab) {
 		chrome.tabs.update(tab.id, {
 			url: url
 		});
