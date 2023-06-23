@@ -1,8 +1,8 @@
 {
   "name": "LEO Address Bar Search",
   "description": "Adds a 'leo' command to the address bar to quickly look up words in the LEO dictionary.",
-  "version": "1.0",
-  "manifest_version": 2,
+  "version": "1.2",
+  "manifest_version": 3,
   "permissions": [
     "tabs"
   ],
@@ -15,7 +15,7 @@
     "keyword": "leo"
   },
   "background": {
-    "scripts": ["js/background.js"]
+    "service_worker": "js/background.js"
   },
   "options_page": "html/options.html"
 }
